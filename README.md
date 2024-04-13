@@ -11,3 +11,33 @@
   <li>- [ ] **A previously created crewmate can be deleted from the crewmate list**</li>
   <li>- [ ] **Each crewmate has a direct, unique link to an info page about them**</li>
 </ul>
+<h2>The following **optional** features are implemented:</h2>
+<ul>
+<li>- [ ] A crewmate can be given a category upon creation which restricts their attributes</li>
+<li>- [ ] The site displays summary statistics about a user's crew on their crew page</li>
+<li>- [ ] The site displays a custom "success" metric about a user's crew which changes the look of the crewmate list</li>
+</ul>
+<h2>The following **additional** features are implemented:</h2>
+<ul>
+  <li>* [ ] List anything else that you added to improve the site's functionality!</li>
+</ul>
+
+## Video Walkthrough
+
+## GIF
+
+## License
+
+    Copyright [2024] [Sisi Wang]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
