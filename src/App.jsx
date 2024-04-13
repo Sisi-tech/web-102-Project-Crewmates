@@ -1,9 +1,11 @@
+
 import Home from './component/Home'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import CreatePost from './pages/CreatePost';
 import ReadPost from './pages/ReadPost';
 import video from "./assets/video.mp4";
+import EditPost from './pages/EditPost';
 
 function App() {
   return (

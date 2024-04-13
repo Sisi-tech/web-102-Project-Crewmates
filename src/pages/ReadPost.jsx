@@ -28,9 +28,10 @@ const ReadPost = () => {
         <div className="grid sm:grid-cols-3 grid-cols-1 sm:gap-8 gap-4 pl-2 pt-20">
             {
                 posts && posts.length > 0 ?
-                posts.map((post, index) => 
+                posts.map((post) => 
                     <Card 
-                        key={post.index} 
+                        key={post.id} 
+                        id={post.id}
                         name={post.name} 
                         speed={post.speed} 
                         color={post.color} 
