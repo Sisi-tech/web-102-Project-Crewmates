@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import green from "../assets/green.png";
-import CrewmateImages from '../component/CrewmateImages';
-
+import { supabase } from '../client';
 
 const CreatePost = () => {
-    const [post, setPost] = useState({name: "", speed: "", color: ""})
+    const [post, setPost] = useState({name: "", speed: "", color: ""});
+
+    const createPost = async (e) => {
+        e.preventDefault();
+        await supabase
+            .from('Crewmate')
+            .insert({name: post.name, speed: post.speed, color: post.color});
+
+        window.location = "/";
+    }
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -12,7 +20,6 @@ const CreatePost = () => {
             ...prev,
             [name]: value,
         }));
-       
     };
 
     return (
@@ -23,37 +30,38 @@ const CreatePost = () => {
                 <div className='flex gap-8'>
                     <div className='flex gap-8'>
                         <div className='flex flex-col bg-gray-800 h-[200px] rounded-xl p-14 gap-6 text-xl shadow-lg'>
-                            <label htmlFor='name' name="name" className='text-2xl'>Name:</label>
+                            <label htmlFor='name' className='text-2xl'>Name:</label>
                             <input 
                                 type="text" 
                                 id="name" 
+                                name="name" 
                                 placeholder="Enter crewmate name" 
                                 value={post.name}  
                                 onChange={handleChange}
-                                className="p-1 pl-2 rounded-lg"
+                                className="p-1 pl-2 rounded-lg text-black"
                             />
                         </div>
                         <div className='flex flex-col bg-gray-800 h-[200px] rounded-xl p-14 gap-6 text-xl shadow-lg'>
-                            <label htmlFor='speed' name="speed" className='text-2xl'>Speed (mph):</label>
+                            <label htmlFor='speed' className='text-2xl'>Speed (mph):</label>
                             <input 
                                 type="text" 
                                 id="speed" 
+                                name="speed" 
                                 placeholder="Enter speed in mph" 
                                 value={post.speed}  
                                 onChange={handleChange}
-                                className="p-1 pl-2 rounded-lg"
+                                className="p-1 pl-2 rounded-lg text-black"
                             />
                         </div>
                     </div>
-                    <div className='flex flex-col bg-gray-800 rounded-xl p-14 gap-6 text-xl shadow-lg'>
-                        <label htmlFor='color' name="color" className='text-2xl'>Color:</label>
-                        <div className='flex flex-col'>
+                    <div className='flex flex-col bg-gray-800 rounded-xl p-14 gap-2 text-xl shadow-lg'>
+                        <label className='text-2xl'>Color:</label>
                             <label className='inline-fle items-center'>
                                 <input 
                                     type="radio" 
                                     name="color" 
                                     value="red" 
-                                    checked={post.color === "Red"} 
+                                    checked={post.color === "red"} 
                                     onChange={handleChange} 
                                 />
                                 <span className='ml-2'>Red</span>
@@ -63,7 +71,7 @@ const CreatePost = () => {
                                     type="radio" 
                                     name="color" 
                                     value="green" 
-                                    checked={post.color === "Green"} 
+                                    checked={post.color === "green"} 
                                     onChange={handleChange} 
                                 />
                                 <span className='ml-2'>Green</span>
@@ -73,7 +81,7 @@ const CreatePost = () => {
                                     type="radio" 
                                     name="color" 
                                     value="blue" 
-                                    checked={post.color === "Blue"} 
+                                    checked={post.color === "blue"} 
                                     onChange={handleChange} 
                                 />
                                 <span className='ml-2'>Blue</span>
@@ -83,7 +91,7 @@ const CreatePost = () => {
                                     type="radio" 
                                     name="color" 
                                     value="pink" 
-                                    checked={post.color === "Pink"} 
+                                    checked={post.color === "pink"} 
                                     onChange={handleChange} 
                                 />
                                 <span className='ml-2'>Pink</span>
@@ -93,7 +101,7 @@ const CreatePost = () => {
                                     type="radio" 
                                     name="color" 
                                     value="yellow" 
-                                    checked={post.color === "Yellow"} 
+                                    checked={post.color === "yellow"} 
                                     onChange={handleChange} 
                                 />
                                 <span className='ml-2'>Yellow</span>
@@ -103,7 +111,7 @@ const CreatePost = () => {
                                     type="radio" 
                                     name="color" 
                                     value="purple" 
-                                    checked={post.color === "Purple"} 
+                                    checked={post.color === "purple"} 
                                     onChange={handleChange} 
                                 />
                                 <span className='ml-2'>Purple</span>
@@ -113,15 +121,18 @@ const CreatePost = () => {
                                     type="radio" 
                                     name="color" 
                                     value="white" 
-                                    checked={post.color === "White"} 
+                                    checked={post.color === "white"} 
                                     onChange={handleChange} 
                                 />
                                 <span className='ml-2'>White</span>
                             </label>
-                        </div>
                     </div>
                 </div>
-                <button type="button" className='bg-gray-50 text-black w-[200px] p-2 rounded-full shadow-md'>
+                <button 
+                    type="button" 
+                    className='bg-gray-50 text-black w-[200px] p-2 rounded-full shadow-md'
+                    onClick={createPost}
+                >
                     Create Crewmate
                 </button>
             </form>
