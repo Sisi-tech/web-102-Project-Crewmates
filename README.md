@@ -1,4 +1,4 @@
-## Web Development Project 7 - Check out the live demo of Crewmates [here](https://crewmate-page.netlify.app/).
+## Web Development Project 7 - Crewmates [here](https://crewmate-page.netlify.app/)
 <p>Submitted by: Sisi Wang</p>
 <p>Time spent: 4 hrs</p>
 ## Required Features
