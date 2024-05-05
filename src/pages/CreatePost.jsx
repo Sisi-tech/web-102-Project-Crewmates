@@ -23,12 +23,12 @@ const CreatePost = () => {
     };
 
     return (
-        <div className='flex flex-col gap-4 justify-center items-center'>
-            <h2 className='text-center text-5xl'>Create a new Crewmate</h2>
+        <div className='w-full h-full pt-2 flex flex-col gap-4 justify-center items-center'>
+            <h2 className='text-center md:text-5xl sm:text-3xl'>Create a new Crewmate</h2>
             <img src={green} alt="green" className='w-[200px]' />
             <form className='flex flex-col gap-8 justify-center items-center'>
-                <div className='flex gap-8'>
-                    <div className='flex gap-8'>
+                <div className='flex md:gap-8 sm:gap-4 sm:flex-col md:flex-row'>
+                    <div className='flex md:gap-8 sm:gap-4 md:flex-row sm:flex-col'>
                         <div className='flex flex-col bg-gray-800 h-[200px] rounded-xl p-14 gap-6 text-xl shadow-lg'>
                             <label htmlFor='name' className='text-2xl'>Name:</label>
                             <input 

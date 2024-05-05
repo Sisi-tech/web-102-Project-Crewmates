@@ -23,9 +23,9 @@ const ReadPost = () => {
     }, []);
 
     return (
-        <div className="flex flex-col justify-center align-center text-center pt-16">
-            <h2 className="text-5xl">Your Crewmate Gallery!</h2>
-        <div className="grid sm:grid-cols-3 grid-cols-1 sm:gap-8 gap-4 pl-2 pt-20">
+        <div className="w-full h-full pb-10 flex flex-col justify-center align-center text-center pt-16">
+            <h2 className="md:text-5xl sm:text-3xl">Your Crewmate Gallery!</h2>
+        <div className="grid md:grid-cols-3 sm:grid-cols-1 sm:gap-8 gap-4 pl-2 pt-20">
             {
                 posts && posts.length > 0 ?
                 posts.map((post) => 

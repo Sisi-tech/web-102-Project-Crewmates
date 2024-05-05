@@ -9,10 +9,10 @@ import EditPost from './pages/EditPost';
 
 function App() {
   return (
-    <div className='w-screen bg-gray-700 text-gray-50 pb-20'>
+    <div className='w-screen h-auto bg-gray-700 text-gray-50 pb-20'>
     <BrowserRouter>
       <div className='flex'>
-        <div className='flex flex-col gap-60 w-[260px] p-4 pt-20 text-center text-2xl bg-gray-800 h-screen'>
+        <div className='flex flex-col justify-between w-[260px] p-4 pt-20 text-center text-2xl bg-gray-800 h-auto'>
           <div className='flex flex-col gap-10'>
           <Link to="/">Home</Link>
           <Link to="/create">Create a CrewMate!</Link>
