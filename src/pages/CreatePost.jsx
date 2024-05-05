@@ -23,7 +23,7 @@ const CreatePost = () => {
     };
 
     return (
-        <div className='w-full h-full pt-2 flex flex-col gap-4 justify-center items-center'>
+        <div className='w-full h-screen pt-2 flex flex-col gap-4 justify-center items-center'>
             <h2 className='text-center md:text-5xl sm:text-3xl'>Create a new Crewmate</h2>
             <img src={green} alt="green" className='w-[200px]' />
             <form className='flex flex-col gap-8 justify-center items-center'>
